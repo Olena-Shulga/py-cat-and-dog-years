@@ -18,10 +18,10 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
         get_human_age(15, 15) == [1, 1]
         get_human_age(24, 24) == [2, 2]
     """
-    if not (0 <= cat_age <= 150 and 0 <= dog_age <= 150):
-        raise ValueError('Cat or dog age must be between 0 and 150.')
     if not (isinstance(cat_age, int) and isinstance(dog_age, int)):
         raise TypeError('Cat or dog age must be integer.')
+    if not (0 <= cat_age <= 150 and 0 <= dog_age <= 150):
+        raise ValueError('Cat or dog age must be between 0 and 150.')
 
     return [
         convert_to_human(cat_age, 15, 9, 4),
